@@ -1,0 +1,25 @@
+{
+  "skills": {
+    "secLabel": "Skills<span>.</span>",
+    "programmingLanguages": {
+      "title": "Programming Languages",
+      "languages": ["JavaScript", "TypeScript"]
+    },
+    "webTechnologies": {
+      "title": "Web Technologies",
+      "technologies": ["React JS", "HTML", "CSS", "SCSS (Sass)", "Bootstrap", "jQuery"]
+    },
+    "industryKnowledge": {
+      "title": "Industry Knowledge",
+      "architecture": ["Model-View-ViewModel (MVVM)", "Model-View-Controller (MVC)"]
+    } ,
+    "testing": {
+      "title": "Testing",
+      "test": ["Jest", "React Testing Library", "Cypress"]
+    },
+    "versionControl": {
+      "title": "Version Control",
+      "verControl": "Git"
+    }
+  }
+}

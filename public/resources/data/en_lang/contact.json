@@ -1,0 +1,15 @@
+{
+  "contact": {
+    "secLabel": "Contact<span>.</span>",
+    "btnLabel": "Download Resume",
+    "responseSuccess": "Message is sent",
+    "responseFail": "Message failed to send"
+  },
+  "formLabel": {
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "submit": "Submit"
+  }
+}

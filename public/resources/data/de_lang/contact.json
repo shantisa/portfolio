@@ -1,0 +1,15 @@
+{
+  "contact": {
+    "secLabel": "Kontakt<span>.</span>",
+    "btnLabel": "Lebenslauf Herunterladen",
+    "responseSuccess": "Nachricht wurde gesendet",
+    "responseFail": "Nachricht konnte nicht gesendet werden"
+  },
+  "formLabel": {
+    "name": "Name",
+    "email": "Email",
+    "subject": "Betreff",
+    "message": "Nachricht",
+    "submit": "Absenden"
+  }
+}

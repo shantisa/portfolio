@@ -1,0 +1,29 @@
+{
+  "secLabel": "Bildung<span>.</span>",
+  "education" : [
+    {
+      "degree": "High School Diploma",
+      "institution": "Cedar Shoals High School",
+      "completionDate": "08/2014 – 05/2018"
+    },
+    {
+      "degree": "Bachelor of Science in Informatik",
+      "institution": "University of Georgia",
+      "completionDate": "08/2018 – 05/2022"
+    }
+  ],
+  "certificates": [
+    {
+      "title": "Bibliotheken für die Front-End-Entwicklung",
+      "completionDate": "12/2022",
+      "link": "https://www.freecodecamp.org/certification/invisible_girl22/front-end-development-libraries",
+      "label": "Front-End Zertifikat Link"
+    },
+    {
+      "title": "Back-End-Entwicklung und APIs",
+      "completionDate": "01/2023",
+      "link": "https://www.freecodecamp.org/certification/invisible_girl22/back-end-development-and-apis",
+      "label": "Back-End und API Zertifikat Link"
+    }
+  ]
+}

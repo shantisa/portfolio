@@ -1,0 +1,11 @@
+{
+  "navigation": {
+    "home": "Home",
+    "aboutMe": "About Me",
+    "skills": "Skills",
+    "education": "Education",
+    "projects": "Projects",
+    "resume": "Resume",
+    "contact": "Contact"
+  }
+}

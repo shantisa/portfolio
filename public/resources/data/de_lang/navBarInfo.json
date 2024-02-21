@@ -1,0 +1,11 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "aboutMe": "Über mich",
+    "skills": "Fähigkeiten",
+    "education": "Bildung",
+    "projects": "Projekte",
+    "resume": "Lebenslauf",
+    "contact": "Kontakt"
+  }
+}

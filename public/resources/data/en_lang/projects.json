@@ -1,0 +1,51 @@
+{
+  "secLabel": "Projects<span>.</span>",
+  "btnLabelShow": "Show more",
+  "btnLabelHide": "Show less",
+  "projects" : [
+    {
+      "id": 1,
+      "title": "React Player",
+      "completionDate": "06/2023 – 08/2023",
+      "description": "The React Player project is a customized video player with multiple features. It includes a search bar for inputting video URLs, play/pause functionality, volume control, and a sound analyzer with a waveform visualization.",
+      "technologies": ["React JS", "HTML", "CSS(SCSS)", "JavaScript", "Jest", "Cypress", "React Testing Library", "MVVM (Model–View–Viewmodel) Architecture", "Git"],
+      "link": "https://github.com/shantisa/react-player",
+      "images": ["/resources/images/vidPlayer_Phone.jpg", "/resources/images/vidPlayer_Laptop.jpg"]
+    },
+    {
+      "id": 2,
+      "title": "Trackett",
+      "completionDate": "02/2023 – present",
+      "description": "Trackett is a job application tracker software designed to help users manage their job applications efficiently. The project includes features for creating an account, logging in, and basic application tracking. Planned enhancements involve the addition of a calendar feature for organizing application entries.",
+      "technologies": ["Node.js", "npm", "Express", "MongoDB", "Mongoose", "React JS", "HTML", "CSS(SCSS)", "Bootstrap", "JavaScript", "MVC (Model-View-Controller) Architecture", "MVVM (Model–View–Viewmodel) Architecture", "Git"],
+      "link": "https://github.com/shantisa/trackettFrontend",
+      "images": ["/resources/images/trackett_Laptop.jpg", "/resources/images/trackett_Phone.jpg", "/resources/images/trackett_Tablet.jpg"]
+    },
+    {
+      "id": 3,
+      "title": "KAS",
+      "completionDate": "09/2021 – 12/2021",
+      "description": "KAS is a project focused on enhancing Brightspace with an attendance tracking feature. This project involves the development of user stories, wireframes, and prototypes, aiming to improve attendance management in educational settings.",
+      "link": "https://shantisastrowder1.wixsite.com/kas-team",
+      "images": ["/resources/images/KAS.png"]
+    },
+    {
+      "id": 4,
+      "title": "Brazilian Overstock",
+      "completionDate": "02/2021 – 05/2021",
+      "description": "This project centers around a comprehensive Brazilian e-commerce dataset that users can interact with. The dataset contains information about 100,000 orders across multiple marketplaces in Brazil, offering insights into customer-seller relationships and product performance.",
+      "technologies": ["Java", "HTML", "CSS", "Python", "MySQL Workbench", "Spring Boot", "Git"],
+      "link": "https://github.com/shantisa/DatabaseTerm",
+      "images": ["/resources/images/Projects_React.jpg"]
+    },
+    {
+      "id": 5,
+      "title": "SAJ",
+      "completionDate": "08/2020 – 12/2020",
+      "description": "SAJ is an E-commerce website developed as part of a university project. This web application provides users with an interactive shopping experience, featuring product listings, shopping cart functionality, and secure payment processing.",
+      "technologies": ["PHP", "JavaScript", "HTML", "CSS", "MySQL", "Git"],
+      "link": "https://github.com/ariesaviles/csci4300Final",
+      "images": ["/resources/images/Projects_React.jpg"]
+    }
+  ]
+}

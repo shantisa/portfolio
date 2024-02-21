@@ -1,0 +1,187 @@
+.navContainer{
+  position: fixed;
+  top:0;
+  width: 100%;
+  z-index: 10;
+  .navStyle{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    background-color: #1A1A1D;
+    font-family: 'FigTree';
+    color:white;
+    list-style: none;
+    max-height: 80px;
+    width: 100%;
+    li{
+      display: inline-block;
+      line-height: 80px;
+      margin-right: 15px;
+      cursor: pointer;
+      a{
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 300;
+        text-transform: uppercase;
+        padding: 7px 13px;
+        border-radius: 3px;
+        &.active{
+          font-weight: bold;
+          border-bottom: 4px solid #950740;
+          padding-bottom: 2px;
+        }
+        &:hover:not(.active){
+          background: #950740;
+          transition: .5s;
+          font-weight: bold;
+        }
+      }
+      button{
+        outline: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: white;
+        font-size: 16px;
+        border-radius: 3px;
+        margin: 0 3px;
+        &:hover{
+          color: #950740;
+          font-weight: bold;
+        }
+      }
+    }
+    .navLink{
+      margin-right: 30%;
+    }
+    .logo{
+      color: white;
+      font-size: 35px;
+      line-height: 80px;
+      padding: 0 50px;
+      font-weight: bold;
+      font-family: 'Gloria Hallelujah';
+      #logoDot{
+        color: #950740;
+      }
+    }
+  }
+  .checkBtn{
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1400px){
+  .navContainer{
+    &.showNavbar{
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      background-color: rgba(#1A1A1D, 0.9);
+      overflow: auto;
+      transition: 0.5s;
+      .navStyle{
+        flex-direction: column;
+        width: 100%;
+        li:not(.logo){
+          text-align: center;
+          display: block;
+          a{
+            font-family: "Poppins";
+            padding: 8px;
+            font-size: 30px;
+            transition: color 0.8s ease;
+            &:hover{
+              background: unset;
+              color: #950740;
+            }
+          }
+        }
+        button{
+          font-size: 25px;
+          margin: 0 8px;
+          &:hover{
+            color: #950740 !important;
+          }
+        }
+        #divider{
+          display: none;
+        }
+      }
+      .checkBtn{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        &:hover{
+          filter: brightness(0) saturate(100%) invert(6%) sepia(99%) saturate(5483%) hue-rotate(330deg) brightness(111%) contrast(96%);
+        }
+      }
+    }
+    .navStyle{
+      li:not(.logo){
+        display: none;
+      }
+    }
+    .checkBtn{
+      display: block;
+      &:hover{
+        filter: brightness(0) saturate(100%) invert(6%) sepia(99%) saturate(5483%) hue-rotate(330deg) brightness(111%) contrast(96%);
+      }
+    }
+  }
+
+}
+
+/**
+@media screen and (max-width: 500px){
+  .navContainer{
+    .navStyle{
+      flex-direction: column;
+      li:not(.logo){
+        background-color: #950740;
+        position: relative;
+        transform: translateX(-100%);
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        transition: all .5s;
+        a{
+          font-size: 18px;
+          &.active{
+            border-bottom: 4px solid #1A1A1D;
+            padding-bottom: 2px;
+          }
+          &:hover:not(.active){
+            background: #1A1A1D;
+          }
+        }
+        button{
+          font-size: 18px;
+          color: white !important;
+          &:hover{
+            color: #1A1A1D !important;
+          }
+        }
+      }
+      .checkBtn{
+        display: block;
+      }
+      #check:checked ~ li:not(.logo){
+        transform: translateX(0);
+      }
+    }
+  }
+
+}*/

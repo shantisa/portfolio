@@ -1,0 +1,216 @@
+.skillsContainer{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background: #4E4E50;
+  flex-direction: column;
+  .box {
+    margin: 3em;
+    display: flex;
+    position: relative;
+
+    .sectionLabel {
+      height: 8vw;
+      position: relative;
+
+      h1 {
+        padding: 0 10px;
+        background: #1A1A1D;
+        font-size: 4vw;
+        color: white;
+        font-family: 'Poppins';
+        font-weight: bold;
+        text-transform: uppercase;
+        -webkit-animation: mainFadeIn 2s forwards;
+        -o-animation: mainFadeIn 2s forwards;
+        animation: mainFadeIn 2s forwards;
+        animation-delay: 1.6s;
+        opacity: 0;
+
+        span {
+          color: #950740;
+          font-size: 4.5vw;
+        }
+      }
+
+      .block {
+        width: 0;
+        height: inherit;
+        background: #950740;
+        position: absolute;
+        animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+      }
+    }
+  }
+
+  .skills-list{
+    margin: 3em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    grid-gap: 40px;
+    margin-top: 0;
+    div{
+      background: #1A1A1D;
+      padding: 40px;
+      font-size: 16px;
+      color: white;
+      border-radius: 10px;
+      text-align: center;
+      transition: background 0.5s, transform 0.5s;
+      img{
+        margin-bottom: 30px;
+      }
+      h2{
+        text-align: left;
+        text-transform: uppercase;
+        font-family: 'Lato';
+        font-size: 1.7vw;
+        margin-bottom: 15px;
+      }
+      p{
+        text-align: left;
+        font-family: 'Poppins';
+        font-size: 1.3vw;
+      }
+      &:hover{
+        background: #950740;
+        transform: translateY(-10px);
+      }
+    }
+  }
+}
+
+@keyframes mainBlock {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .skillsContainer{
+    .box{
+      .sectionLabel{
+        height: 10vw;
+        h1{
+          font-size: 5vw;
+          span {
+            font-size: 5.5vw;
+          }
+        }
+      }
+    }
+    .skills-list{
+      div{
+        h2{
+          font-size: 2.4vw;
+        }
+        p{
+          font-size: 1.7vw;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .skillsContainer{
+    .box{
+      text-align: center;
+      .sectionLabel{
+        height: 10.5vw;
+        width: 100%;
+        h1{
+          font-size: 5.5vw;
+          span {
+            font-size: 6vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 933px){
+  .skillsContainer{
+    .skills-list{
+      div{
+        h2{
+          font-size: 3.3vw;
+        }
+        p{
+          font-size: 2.2vw;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px){
+  .skillsContainer{
+    .box{
+      .sectionLabel{
+        h1{
+          font-size: 6.5vw;
+          span {
+            font-size: 7vw;
+          }
+        }
+      }
+    }
+    .skills-list{
+      div{
+        h2{
+          font-size: 4vw;
+        }
+        p{
+          font-size: 2.9vw;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 580px){
+  .skillsContainer{
+    .box{
+      .sectionLabel{
+        h1{
+          font-size: 8vw;
+          span {
+            font-size: 8.5vw;
+          }
+        }
+      }
+    }
+    .skills-list{
+      display: flex;
+      flex-direction: column;
+      div{
+        h2{
+          font-size: 4.4vw;
+        }
+        p{
+          font-size: 3.2vw;
+        }
+      }
+    }
+  }
+}

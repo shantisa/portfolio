@@ -1,0 +1,253 @@
+.eduContainer{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background: white;
+  flex-direction: column;
+  .box {
+    margin: 3em;
+    display: flex;
+    position: relative;
+
+    .sectionLabel {
+      height: 8vw;
+      position: relative;
+
+      h1 {
+        padding: 0 10px;
+        background: #1A1A1D;
+        font-size: 4vw;
+        color: white;
+        font-family: 'Poppins';
+        font-weight: bold;
+        text-transform: uppercase;
+        -webkit-animation: mainFadeIn 2s forwards;
+        -o-animation: mainFadeIn 2s forwards;
+        animation: mainFadeIn 2s forwards;
+        animation-delay: 1.6s;
+        opacity: 0;
+
+        span {
+          color: #950740;
+          font-size: 4.5vw;
+        }
+      }
+
+      .block {
+        width: 0;
+        height: inherit;
+        background: #950740;
+        position: absolute;
+        animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+      }
+    }
+  }
+  .eduGrid{
+    .eduContent, .certContent{
+      .eduItem{
+        background: #faf9ff;
+        margin: 2em 3em;
+        padding: 40px 30px;
+        border-radius: 10px;
+        transition: background 0.5s, transform 0.5s;
+        display: flex;
+        flex-direction: row;
+        font-family: 'Lato';
+        .iconContainer{
+          background: #950740;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 20px;
+        }
+        .eduText{
+          .date{
+            font-weight: 600;
+            font-size: 1.3vw;
+          }
+          h4{
+            font-size: 1.5vw;
+            color: #1A1A1D;
+          }
+          a{
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.5s color, 0.5s border-bottome;
+            &:hover{
+              color: #950740 !important;
+              padding-bottom: 2px;
+              border-bottom: 3px solid #950740;
+            }
+          }
+          .pos{
+            color: #1A1A1D;
+            font-size: 1.3vw;
+            font-weight: 400;
+          }
+        }
+        &:hover{
+          background: #1A1A1D;
+          color: white;
+          transform: translateY(-10px);
+          .eduText{
+            h4, .pos{
+              color:white;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@keyframes mainBlock {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .eduContainer{
+    .box{
+      .sectionLabel{
+        height: 10vw;
+        h1{
+          font-size: 5vw;
+          span {
+            font-size: 5.5vw;
+          }
+        }
+      }
+    }
+    .eduGrid{
+      .eduContent, .certContent{
+        .eduItem{
+          .eduText{
+            .date, .pos{
+              font-size: 1.7vw;
+            }
+            h4{
+              font-size: 2.2vw;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .eduContainer{
+    .box{
+      text-align: center;
+      .sectionLabel{
+        height: 10.5vw;
+        width: 100%;
+        h1{
+          font-size: 5.5vw;
+          span {
+            font-size: 6vw;
+          }
+        }
+      }
+    }
+    .eduGrid{
+      .eduContent, .certContent{
+        .eduItem{
+          .eduText{
+            .date, .pos{
+              font-size: 2.2vw;
+            }
+            h4{
+              font-size: 3vw;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 650px){
+  .eduContainer{
+    .box{
+      .sectionLabel{
+        h1{
+          font-size: 6.5vw;
+          span {
+            font-size: 7vw;
+          }
+        }
+      }
+    }
+    .eduGrid{
+      .eduContent, .certContent{
+        .eduItem{
+          .eduText{
+            .date, .pos{
+              font-size: 2.9vw;
+            }
+            h4{
+              font-size: 3.3vw;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 580px){
+  .eduContainer{
+    .box{
+      .sectionLabel{
+        h1{
+          font-size: 8vw;
+          span {
+            font-size: 8.5vw;
+          }
+        }
+      }
+    }
+    .eduGrid{
+      .eduContent, .certContent{
+        .eduItem{
+          .eduText{
+            .date, .pos{
+              font-size: 3.2vw;
+            }
+            h4{
+              font-size: 4vw;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

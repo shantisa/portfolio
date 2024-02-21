@@ -1,0 +1,51 @@
+{
+  "secLabel": "Projekte<span>.</span>",
+  "btnLabelShow": "Mehr anzeigen",
+  "btnLabelHide": "Weniger anzeigen",
+  "projects": [
+    {
+      "id": 1,
+      "title": "React Player",
+      "completionDate": "06/2023 – 08/2023",
+      "description": "Das React Player-Projekt ist ein individueller Videoplayer mit mehreren Funktionen. Er umfasst eine Suchleiste zur Eingabe von Videourls, Wiedergabe-/Pause-Funktionen, Lautstärkeregelung und einen Soundanalysator mit Wellenformvisualisierung.",
+      "technologies": ["React JS", "HTML", "CSS(SCSS)", "JavaScript", "Jest", "Cypress", "React Testing Library", "MVVM (Model–View–Viewmodel) Architektur", "Git"],
+      "link": "https://github.com/shantisa/react-player",
+      "images": ["/resources/images/vidPlayer_Phone.jpg", "/resources/images/vidPlayer_Laptop.jpg"]
+    },
+    {
+      "id": 2,
+      "title": "Trackett",
+      "completionDate": "02/2023 – heute",
+      "description": "Trackett ist eine Software zur Verfolgung von Bewerbungen, die Benutzern dabei hilft, ihre Bewerbungen effizient zu verwalten. Das Projekt umfasst Funktionen zum Erstellen eines Kontos, zum Einloggen und zur grundlegenden Bewerbungsverfolgung. Geplante Erweiterungen umfassen die Hinzufügung einer Kalenderfunktion zur Organisation von Bewerbungseinträgen.",
+      "technologies": ["Node.js", "npm", "Express", "MongoDB", "Mongoose", "React JS", "HTML", "CSS(SCSS)", "Bootstrap", "JavaScript", "MVC (Model-View-Controller) Architektur", "MVVM (Model–View–Viewmodel) Architektur", "Git"],
+      "link": "https://github.com/shantisa/trackettFrontend",
+      "images": ["/resources/images/trackett_Laptop.jpg", "/resources/images/trackett_Phone.jpg", "/resources/images/trackett_Tablet.jpg"]
+    },
+    {
+      "id": 3,
+      "title": "KAS",
+      "completionDate": "09/2021 – 12/2021",
+      "description": "KAS ist ein Projekt, das darauf abzielt, Brightspace um eine Anwesenheitsverfolgungsfunktion zu erweitern. Dieses Projekt beinhaltet die Entwicklung von Benutzerstories, Drahtmodellen und Prototypen, um die Verwaltung von Anwesenheit in Bildungseinrichtungen zu verbessern.",
+      "link": "https://shantisastrowder1.wixsite.com/kas-team",
+      "images": ["/resources/images/KAS.png"]
+    },
+    {
+      "id": 4,
+      "title": "Brazilian Overstock",
+      "completionDate": "02/2021 – 05/2021",
+      "description": "Dieses Projekt dreht sich um einen umfassenden brasilianischen E-Commerce-Datensatz, mit dem Benutzer interagieren können. Der Datensatz enthält Informationen zu 100.000 Bestellungen in verschiedenen brasilianischen Marktplätzen und bietet Einblicke in Kunden-Verkäufer-Beziehungen und die Leistung von Produkten.",
+      "technologies": ["Java", "HTML", "CSS", "Python", "MySQL Workbench", "Spring Boot", "Git"],
+      "link": "https://github.com/shantisa/DatabaseTerm",
+      "images": ["/resources/images/Projects_React.jpg"]
+    },
+    {
+      "id": 5,
+      "title": "SAJ",
+      "completionDate": "08/2020 – 12/2020",
+      "description": "SAJ ist eine E-Commerce-Website, die im Rahmen eines Universitätsprojekts entwickelt wurde. Diese Webanwendung bietet Benutzern ein interaktives Einkaufserlebnis mit Produktlisten, Funktionen für den Einkaufswagen und sichere Zahlungsabwicklung.",
+      "technologies": ["PHP", "JavaScript", "HTML", "CSS", "MySQL", "Git"],
+      "link": "https://github.com/ariesaviles/csci4300Final",
+      "images": ["/resources/images/Projects_React.jpg"]
+    }
+  ]
+}

@@ -1,0 +1,501 @@
+.projContainer{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background: #4E4E50;
+  flex-direction: column;
+  .box {
+    margin: 3em;
+    display: flex;
+    position: relative;
+
+    .sectionLabel {
+      height: 8vw;
+      position: relative;
+
+      h1 {
+        padding: 0 10px;
+        background: #1A1A1D;
+        font-size: 4vw;
+        color: white;
+        font-family: 'Poppins';
+        font-weight: bold;
+        text-transform: uppercase;
+        -webkit-animation: mainFadeIn 2s forwards;
+        -o-animation: mainFadeIn 2s forwards;
+        animation: mainFadeIn 2s forwards;
+        animation-delay: 1.6s;
+        opacity: 0;
+
+        span {
+          color: #950740;
+          font-size: 4.5vw;
+        }
+      }
+
+      .block {
+        width: 0;
+        height: inherit;
+        background: #950740;
+        position: absolute;
+        animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+      }
+    }
+  }
+  .projGrid{
+    margin: 3em;
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 40px;
+    .projContent{
+      cursor: pointer;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      color: white;
+      .projectCover{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        display: block;
+        transition: transform 0.5s;
+      }
+      .layer{
+        width: 100%;
+        height: 0;
+        background: linear-gradient(rgba(0,0,0,0.6), #950740);
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        transition: height 0.5s;
+        h3{
+          font-family: 'Poppins';
+          font-size: 21px;
+          font-weight: 500;
+          margin-bottom: 20px;
+          text-transform: uppercase;
+        }
+        img{
+          margin-top: 20px;
+          line-height: 60px;
+          background: white;
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          text-align: center;
+          transition: width 0.5s, height 0.5s;
+          &:hover{
+            width: 45px;
+            height: 45px;
+          }
+        }
+      }
+    }
+    .projContent:hover img{
+      transform: scale(1.1);
+    }
+    .projContent:hover .layer{
+      height: 100%;
+    }
+  }
+  .projBtn{
+    outline: none;
+    border: none;
+    display: block;
+    width: fit-content;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'FigTree';
+    border-radius: 5px;
+    background: #1A1A1D;
+    font-size: 16px;
+    color: white;
+    margin: 0 auto 50px;
+    padding: 14px 50px;
+    transition: color 0.3s, background 0.3s;
+    &:hover{
+      color: #950740;
+    }
+  }
+
+  .checkBtn{
+    z-index: 10;
+    cursor: pointer;
+    position: absolute;
+    right: 80px;
+    top: 80px;
+    &:hover{
+      filter: brightness(0) saturate(100%) invert(94%) sepia(0%) saturate(7442%) hue-rotate(111deg) brightness(117%) contrast(99%);
+    }
+  }
+  #check{
+    display: none;
+  }
+
+  //Project Description Styling
+
+  &.showProjectDesc{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background: #950740;
+    -webkit-animation: slideInFromTop 1s ease-in-out forwards;
+    -o-animation: slideInFromTop 1s ease-in-out forwards;
+    animation: slideInFromTop 1s ease-in-out forwards;
+    flex-direction: column;
+    .projDescContent{
+      margin: 3em;
+      margin-top: 0;
+      .portSummary{
+        background: #1A1A1D;
+        padding: 40px;
+        border-radius: 10px;
+        float: left;
+        color: white;
+        text-align: left;
+        width: 40%;
+        h1{
+          font-size: 2.5vw;
+          font-family: 'Lato';
+          margin-bottom: 10px;
+        }
+        #date{
+          font-weight: bold;
+          font-size: 1.2vw;
+          font-family: 'Poppins';
+          text-transform: uppercase;
+        }
+        #description{
+          font-family: 'Lato';
+          font-size: 1.3vw;
+          line-height: 1.4;
+          margin-bottom: 20px;
+        }
+        #technologies{
+          cursor: pointer;
+          display: inline-flex;
+          margin: 10px 10px 10px 0;
+          background: #950740;
+          padding: 10px;
+          border-radius: 10px;
+          transition: background 0.5s, color 0.5s;
+          font-weight: bold;
+          font-family: 'Poppins';
+          font-size: 16px;
+          &:hover{
+            color: #1A1A1D;
+            background: white;
+          }
+        }
+        #projLink{
+          display: block;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-family: 'Poppins';
+          &:hover{
+            filter: brightness(0) saturate(100%) invert(10%) sepia(56%) saturate(5480%) hue-rotate(324deg) brightness(101%) contrast(103%);
+          }
+        }
+      }
+      .portGallery{
+        float: right;
+        width: 50%;
+
+        .gridItem{
+          position: relative;
+          float: left;
+          width: 30%;
+          padding: 10px;
+          .tabImage{
+            width: 100%;
+            height: auto;
+          }
+          .overlay{
+            cursor: pointer;
+            width: calc(100% - 20px);
+            height: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            transition: height 0.5s;
+            img{
+              width: 35px;
+              height: 35px;
+              text-align: center;
+              transition: width 0.5s, height 0.5s;
+              &:hover{
+                width: 45px;
+                height: 45px;
+              }
+            }
+          }
+        }
+
+        .expandedImg{
+          .expanded{
+            width: 100%;
+            display: block;
+          }
+        }
+
+        .gridItem:hover .overlay{
+          height: calc(100% - 20px);
+        }
+
+        .gridItem:after{
+          content: "";
+          display: table;
+          clear: both;
+        }
+      }
+    }
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes mainBlock {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .projContainer{
+    //Project Description Styling
+    &.showProjectDesc{
+      .projDescContent{
+        .portGallery{
+          .gridItem{
+            width: 28%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .projContainer{
+    .box{
+      .sectionLabel{
+        height: 10vw;
+        h1{
+          font-size: 5vw;
+          span {
+            font-size: 5.5vw;
+          }
+        }
+      }
+    }
+
+    //Project Description Styling
+    &.showProjectDesc{
+      .projDescContent{
+        .portSummary{
+          h1{
+            font-size: 3vw;
+          }
+          #date{
+            font-size: 1.5vw;
+          }
+          #description{
+            font-size: 1.6vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .projContainer{
+    .box{
+      margin-top: 4em;
+      text-align: center;
+      .sectionLabel{
+        height: 10.5vw;
+        width: 100%;
+        h1{
+          font-size: 5.5vw;
+          span {
+            font-size: 6vw;
+          }
+        }
+      }
+    }
+
+    .checkBtn{
+      position: fixed;
+      top: 10px;
+      right: 10px;
+    }
+
+    //Project Description Styling
+    &.showProjectDesc{
+      .projDescContent{
+        .portSummary{
+          text-align: center;
+          float: none;
+          width: 100%;
+          padding: 0;
+          margin-bottom: 2em;
+          h1, #date, #description, #technologies, #projLink{
+            margin: 10px;
+          }
+          h1{
+            padding: 40px 40px 0;
+            text-align: left;
+            font-size: 3.5vw;
+          }
+          #date{
+            //text-align: left;
+            padding: 0 40px;
+            font-size: 2.1vw;
+          }
+          #description{
+            //text-align: left;
+            padding: 0 40px;
+            font-size: 2.4vw;
+          }
+          #technologies{
+            font-size: 17px;
+          }
+          #projLink{
+            text-align: left;
+            padding: 0 40px 20px;
+          }
+        }
+        .portGallery{
+          float: none;
+          width: 100%;
+          .gridItem{
+            width: 29%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px){
+  .projContainer{
+    .box{
+      .sectionLabel{
+        h1{
+          font-size: 6.5vw;
+          span {
+            font-size: 7vw;
+          }
+        }
+      }
+    }
+
+    //Project Description Styling
+    &.showProjectDesc{
+      .projDescContent{
+        .portSummary{
+          h1{
+            font-size: 4.5vw;
+          }
+          #date{
+            font-size: 2.9vw;
+          }
+          #description{
+            font-size: 3vw;
+          }
+        }
+        .portGallery{
+          .gridItem{
+            width: 27%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 580px){
+  .projContainer{
+    .box{
+      .sectionLabel{
+        h1{
+          font-size: 8vw;
+          span {
+            font-size: 8.5vw;
+          }
+        }
+      }
+    }
+
+    .projGrid{
+      display: flex;
+      flex-direction: column;
+    }
+
+    //Project Description Styling
+    &.showProjectDesc{
+      .projDescContent{
+        .portSummary{
+          h1{
+            font-size: 5vw;
+          }
+          #date{
+            font-size: 3.3vw;
+          }
+          #description{
+            font-size: 3.5vw;
+          }
+        }
+        .portGallery{
+          .gridItem{
+
+          }
+        }
+      }
+    }
+  }
+}
