@@ -41,7 +41,7 @@ export default function NavigationBar (props : NavigationProps){
                     <img src={props.showNavbar ? closeIcon : menuIcon} alt="Menu Icon" />
                 </label>
                 <ul className="navStyle" >
-                    <Link to="homeView" spy={true} smooth={true} duration={500} offset={-80} className="navLink">
+                    <Link to="homeView" href="#home" spy={true} smooth={true} duration={500} offset={-80} className="navLink">
                         <li className="logo">S
                             <span id="logoDot">.</span>
                         </li>
@@ -50,22 +50,22 @@ export default function NavigationBar (props : NavigationProps){
                         (
                             <>
                                 <li>
-                                    <Link to="homeView" spy={true} smooth={true} duration={500} offset={-80}>{props.data.home}</Link>
+                                    <Link to="homeView" href="#home" spy={true} smooth={true} duration={500} offset={-80}>{props.data.home}</Link>
                                 </li>
                                 <li>
-                                    <Link to="about" spy={true} smooth={true} duration={500} offset={-80}>{props.data.aboutMe}</Link>
+                                    <Link to="about" href="#about" spy={true} smooth={true} duration={500} offset={-80}>{props.data.aboutMe}</Link>
                                 </li>
                                 <li>
-                                    <Link to="education" spy={true} smooth={true} duration={500} offset={-80}>{props.data.education}</Link>
+                                    <Link to="education" href="#education" spy={true} smooth={true} duration={500} offset={-80}>{props.data.education}</Link>
                                 </li>
                                 <li>
-                                    <Link to="skills" spy={true} smooth={true} duration={500} offset={-80}>{props.data.skills}</Link>
+                                    <Link to="skills" href="#skills" spy={true} smooth={true} duration={500} offset={-80}>{props.data.skills}</Link>
                                 </li>
                                 <li>
-                                    <Link to="project" spy={true} smooth={true} duration={500} offset={-80}>{props.data.projects}</Link>
+                                    <Link to="project" href="#projects" spy={true} smooth={true} duration={500} offset={-80}>{props.data.projects}</Link>
                                 </li>
                                 <li>
-                                    <Link to="contact" spy={true} smooth={true} duration={500} offset={-79}>{props.data.contact}</Link>
+                                    <Link to="contact" href="#contact" spy={true} smooth={true} duration={500} offset={-79}>{props.data.contact}</Link>
                                 </li>
                             </>
                         )
