@@ -1,9 +1,9 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import '../styles/ProjectStyle.scss'
-import {ProjectData, ProjectsModel} from "../../Data/Model/ProjectsModel";
+import { ProjectData, ProjectsModel } from "../../Data/Model/ProjectsModel";
 import openPort from "../../resources/icons/openPortfolio.svg"
 import closeDesc from "../../resources/icons/closePortfolio.svg"
-import minPhoto from "../../resources/icons/minIcon.svg"
+import maxPhoto from "../../resources/icons/maxIcon.svg"
 import extLink from "../../resources/icons/extLinkIcon.svg"
 
 /**
@@ -36,7 +36,7 @@ export default function Projects(props: ProjectProps) {
     const NUM_PROJECTS = 3;
     let projectList = props.data?.projects;
 
-    if(!props.showFullList){
+    if (!props.showFullList) {
         projectList = props.data?.projects.slice(0, NUM_PROJECTS);
     }
 
@@ -48,16 +48,16 @@ export default function Projects(props: ProjectProps) {
 
             {selectedProject !== null ?
                 <>
-                    <input type="checkbox" id="check" checked={true}/>
+                    <input type="checkbox" id="check" checked={true} />
                     <label htmlFor="check" className="checkBtn" onClick={props.closeDesc}>
-                        <img src={closeDesc} alt="Close Portfolio Description Button"/>
+                        <img src={closeDesc} alt="Close Portfolio Description Button" />
                     </label>
                 </>
                 : ""}
             <div className="box">
                 <div className="sectionLabel">
                     <div className="block"></div>
-                    <h1 dangerouslySetInnerHTML={{__html: props.data !== null ? props.data.secLabel : ""}}></h1>
+                    <h1 dangerouslySetInnerHTML={{ __html: props.data !== null ? props.data.secLabel : "" }}></h1>
                 </div>
             </div>
             {selectedProject !== null ?
@@ -70,24 +70,26 @@ export default function Projects(props: ProjectProps) {
                             <p id="technologies">{tech}</p>
                         )}
                         <a href={selectedProject.link} target="_blank" id="projLink"><img src={extLink}
-                                                                                          alt="External Link"/></a>
+                            alt="External Link" /></a>
                     </div>
                     <div className="portGallery">
                         {selectedProject.images.map((imgUrl, index) => (
-                            <div key={index} className="gridItem">
+                            <div key={index} className="gridItem" onClick={() => props.handleImg(index)}>
                                 <img
                                     src={imgUrl}
                                     alt={`${selectedProject?.title} Cover ${index}`}
                                     className="tabImage"
                                 />
-                                <div className="overlay" onClick={() => props.handleImg(index)}>
-                                    <img src={minPhoto} alt="Hover Icon"/>
-                                </div>
+                                {props.selectedImg !== index ?
+                                    <div className="overlay" onClick={() => props.handleImg(index)}>
+                                        <img src={maxPhoto} alt="Hover Icon" />
+                                    </div>
+                                    : ""}
                             </div>
                         ))}
                         <div className="expandedImg">
                             <img src={selectedProject.images[props.selectedImg]} className="expanded"
-                                 alt="Expanded Project Image"/>
+                                alt="Expanded Project Image" />
                         </div>
                     </div>
                 </div>
@@ -97,14 +99,14 @@ export default function Projects(props: ProjectProps) {
                         ?
                         projectList?.map((project, index) => {
                             return (
-                                <div className="projContent">
+                                <div className="projContent" onClick={() => props.handleProject(project.id)}>
                                     <img className="projectCover" src={project.images[0]}
-                                         alt={`Project ${project.title} Cover`}/>
+                                        alt={`Project ${project.title} Cover`} />
                                     <div className="layer">
                                         <h3>{project.title}</h3>
                                         <img src={openPort}
-                                             alt="Plus Sign Icon to open project description page"
-                                             onClick={() => props.handleProject(project.id)}/>
+                                            alt="Plus Sign Icon to open project description page"
+                                            onClick={() => props.handleProject(project.id)} />
                                     </div>
                                 </div>
                             )
@@ -114,7 +116,7 @@ export default function Projects(props: ProjectProps) {
             }
 
             {selectedProject !== null ? " " : <button className="projBtn"
-                                                      onClick={props.toggleProjectList}>{props.showFullList ? props.data?.btnLabelHide : props.data?.btnLabelShow}</button>}
+                onClick={props.toggleProjectList}>{props.showFullList ? props.data?.btnLabelHide : props.data?.btnLabelShow}</button>}
         </div>
     )
 }

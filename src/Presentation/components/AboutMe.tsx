@@ -38,12 +38,13 @@ export default function AboutMe(props : AboutProps){
                     <img src={aboutPhoto} className="aboutPhoto" alt="Shantisa About Me Section" />
                 </div>
                 <div className="aboutContent">
-                    <h1 dangerouslySetInnerHTML={{__html:props.data !== null ? props.data.aboutSummary : ""}}></h1>
+                    <p id="aboutHeader" dangerouslySetInnerHTML={{__html:props.data !== null ? props.data.aboutHeader : ""}}></p>
+                    <p id="aboutBrief" dangerouslySetInnerHTML={{__html:props.data !== null ? props.data.aboutSummary : ""}}></p>
                     <p id="summaryText" dangerouslySetInnerHTML={{__html:props.data !== null && props.showSummary ? props.data.fullSummary : ""}}></p>
-                    <p id="textLabel" onClick={props.handleSummary}>
+                    <div role="button" id="textLabel" onClick={props.handleSummary} aria-expanded={props.showSummary}>
                         {props.showSummary ? props.data?.lessText : props.data?.showText}
                         <img id="arrowImg" src={props.showSummary ? upArrow : downArrow} alt="Arrow Icon"/>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>

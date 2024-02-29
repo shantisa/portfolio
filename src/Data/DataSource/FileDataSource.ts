@@ -115,6 +115,7 @@ export class FileDataSource {
 
             return new AboutModel(
                 json.secLabel,
+                json.aboutHeader,
                 json.aboutSummary,
                 json.showText,
                 json.lessText,

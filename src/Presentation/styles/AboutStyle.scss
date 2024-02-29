@@ -57,9 +57,10 @@
       }
     }
     .aboutContent {
-      h1 {
+      #aboutHeader {
         font-size: 2.5vw;
         font-family: 'Lato';
+        font-weight: bold;
         text-align: left;
         color: #1A1A1D;
         line-height: 1.4;
@@ -89,15 +90,13 @@
           }
         }
       }
-      p {
+      #aboutBrief {
         color: #1A1A1D;
         font-size: 1.5vw;
         margin: 20px 0 15px;
-        br{
-          display: block;
-          content: " ";
-          margin-bottom: 1em;
-        }
+        font-family: 'Lato';
+        font-weight: bold;
+        line-height: 1.4;
       }
       #summaryText{
         line-height: 1.4;
@@ -176,11 +175,11 @@
       }
     .aboutGrid{
       .aboutContent{
-        h1{
+        #aboutHeader{
           font-size: 3vw;
           line-height: 1.5;
         }
-        p{
+        #aboutBrief{
           font-size: 1.7vw;
         }
         #summaryText{
@@ -214,10 +213,10 @@
         margin-bottom: 3em;
       }
       .aboutContent{
-        h1{
+        #aboutHeader{
           font-size: 3.5vw;
         }
-        p{
+        #aboutBrief{
           font-size: 2.3vw;
         }
         #summaryText{
@@ -242,10 +241,10 @@
       }
     .aboutGrid{
       .aboutContent{
-        h1{
+        #aboutHeader{
           font-size: 4.5vw;
         }
-        p{
+        #aboutBrief{
           font-size: 3vw;
         }
         #summaryText{
@@ -270,10 +269,10 @@
       }
     .aboutGrid{
       .aboutContent{
-        h1{
+        #aboutHeader{
           font-size: 5vw;
         }
-        p{
+        #aboutBrief{
           font-size: 3.5vw;
         }
         #summaryText{

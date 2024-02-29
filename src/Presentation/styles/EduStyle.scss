@@ -238,6 +238,7 @@
       .eduContent, .certContent{
         .eduItem{
           .eduText{
+            width: calc(100% - 70px);
             .date, .pos{
               font-size: 3.2vw;
             }

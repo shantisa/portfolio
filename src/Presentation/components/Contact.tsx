@@ -48,14 +48,14 @@ export default function Contact(props : ContactProps){
 
             <div className="formContainer">
                 <form className="contactForm" ref={props.form} onSubmit={props.sendEmail}>
-                    <label>{props.data !== null ? props.data.form.name : ""}</label>
-                    <input type="text" name="user_name" required/>
-                    <label>{props.data !== null ? props.data.form.email : ""}</label>
-                    <input type="email" name="user_email" required/>
-                    <label>{props.data !== null ? props.data.form.subject : ""}</label>
-                    <input type="text" name="subject" required/>
-                    <label>{props.data !== null ? props.data.form.message : ""}</label>
-                    <textarea name="message" required/>
+                    <label htmlFor="user_name">{props.data !== null ? props.data.form.name : ""}</label>
+                    <input type="text" id="user_name" name="user_name" required/>
+                    <label htmlFor="user_email">{props.data !== null ? props.data.form.email : ""}</label>
+                    <input type="email" id="user_email" name="user_email" required/>
+                    <label htmlFor="subject">{props.data !== null ? props.data.form.subject : ""}</label>
+                    <input type="text" id="subject" name="subject" required/>
+                    <label htmlFor="message">{props.data !== null ? props.data.form.message : ""}</label>
+                    <textarea id="message" name="message" required/>
                     <input type="submit" value={props.data !== null ? props.data.form.submit : ""} />
                 </form>
             </div>
