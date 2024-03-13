@@ -6,6 +6,7 @@ import webIcon from '../../resources/icons/webIcon.svg'
 import industryIcon from '../../resources/icons/industryIcon.svg'
 import testIcon from '../../resources/icons/testIcon.svg'
 import verIcon from '../../resources/icons/versionIcon.svg'
+import dbIcon from '../../resources/icons/dbIcon.svg'
 
 /**
  * Interface defining the props expected by the Skills component. It
@@ -63,6 +64,21 @@ export default function Skills(props : SkillsProps){
                       }) : ""}
                   </p>
               </div>
+              <div>
+                    <img src={dbIcon} alt="Database"/>
+                    <h2>{props.data !== null ? props.data.databases.title : ""}</h2>
+                    <p>
+                        {props.data !== null
+                            ? props.data.databases.skills.map((language, index) => {
+                                if(index+1 === props.data?.databases.skills.length){
+                                    return <span key={index}>{language}</span>
+                                } else{
+                                    return <span key={index}>{language}, </span>
+                                }
+
+                            }) : ""}
+                    </p>
+                </div>
               <div>
                   <img src={industryIcon} alt="Industry Logo"/>
                   <h2>{props.data !== null ? props.data.industryKnowledge.title : ""}</h2>

@@ -7,6 +7,7 @@ export class SkillsModel{
     secLabel:string;
     programmingLanguages:SkillsList;
     webTechnologies:SkillsList;
+    databases: SkillsList;
     industryKnowledge:SkillsList;
     testing:SkillsList;
     versionControl:Version;
@@ -16,15 +17,17 @@ export class SkillsModel{
      * @param secLabel - The label for the skills section
      * @param programmingLanguages - List of programming languages
      * @param webTechnologies - List of web technologies
+     * @param databases - List of databases
      * @param industryKnowledge - List of industry knowledge
      * @param testing - List of testing skills
      * @param versionControl - Version control information
      */
-    constructor(secLabel:string, programmingLanguages:SkillsList, webTechnologies:SkillsList, industryKnowledge:SkillsList,
+    constructor(secLabel:string, programmingLanguages:SkillsList, webTechnologies:SkillsList, databases:SkillsList, industryKnowledge:SkillsList,
                 testing:SkillsList, versionControl:Version) {
         this.secLabel = secLabel;
         this.programmingLanguages = programmingLanguages;
         this.webTechnologies = webTechnologies;
+        this.databases = databases;
         this.industryKnowledge = industryKnowledge;
         this.testing = testing;
         this.versionControl = versionControl;

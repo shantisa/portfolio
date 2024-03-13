@@ -152,6 +152,7 @@ export class FileDataSource {
                 json.secLabel,
                 new SkillsList(json.programmingLanguages.title, json.programmingLanguages.languages),
                 new SkillsList(json.webTechnologies.title,json.webTechnologies.technologies),
+                new SkillsList(json.databases.title, json.databases.systems),
                 new SkillsList(json.industryKnowledge.title,json.industryKnowledge.architecture),
                 new SkillsList(json.testing.title, json.testing.test),
                 new Version(json.versionControl.title, json.versionControl.verControl)

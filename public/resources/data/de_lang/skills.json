@@ -9,6 +9,10 @@
       "title": "Webtechnologien",
       "technologies": ["React JS", "HTML", "CSS", "SCSS (Sass)", "Bootstrap", "jQuery"]
     },
+    "databases": {
+      "title": "Datenbanken",
+      "systems": ["SQL, MySQL, MongoDB, Mongoose"]
+    },
     "industryKnowledge": {
       "title": "Branchenwissen",
       "architecture": ["Model-View-ViewModel (MVVM)", "Model-View-Controller (MVC)"]

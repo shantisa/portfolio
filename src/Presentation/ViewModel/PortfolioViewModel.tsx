@@ -44,11 +44,12 @@ export default function PortfolioViewModel() {
     const [skillsData, setSkillsData] = useState<SkillsModel | null>(null);
     const [eduData, setEduData] = useState<EducationModel | null>(null);
     const [projectsData, setProjectsData] = useState<ProjectsModel | null>(null);
-    const rep = useRef(new FileRepository('en'));
+    const rep = useRef<FileRepository | null>(null);
     const form = useRef<HTMLFormElement | null>(null);
 
     // useEffect hook to fetch initial data
     useEffect(() => {
+        rep.current = new FileRepository('en')
         // Subscription to combineLatest observable
         const subscription = combineLatest([rep.current.getNavData(), rep.current.getIntroData(), rep.current.getAboutData(),
             rep.current.getFooterData(), rep.current.getContactData(), rep.current.getSkillsData(), rep.current.getEducationData(), rep.current.getProjectsData()])
@@ -176,6 +177,9 @@ export default function PortfolioViewModel() {
      * Function to change the portfolio language
      */
     function changeLanguage() {
+        if(rep.current == null) {
+            return
+        }
         if (lang === Langauge.en) {
             setLanguage(Langauge.de);
             rep.current.changeLang(Langauge.de);
