@@ -3,19 +3,23 @@
     "secLabel": "Fähigkeiten<span>.</span>",
     "programmingLanguages": {
       "title": "Programmiersprachen",
-      "languages": ["JavaScript", "TypeScript"]
+      "languages": ["JavaScript", "TypeScript", "Java", "Python"]
     },
     "webTechnologies": {
       "title": "Webtechnologien",
       "technologies": ["React JS", "HTML", "CSS", "SCSS (Sass)", "Bootstrap", "jQuery"]
     },
+    "backendTechnologies":{
+      "title": "Backend-Technologien",
+      "technologies": ["Express", "Node.js"]
+    },
     "databases": {
       "title": "Datenbanken",
-      "systems": ["SQL, MySQL, MongoDB, Mongoose"]
+      "systems": ["SQL", "MySQL", "MongoDB", "Mongoose"]
     },
     "industryKnowledge": {
       "title": "Branchenwissen",
-      "architecture": ["Model-View-ViewModel (MVVM)", "Model-View-Controller (MVC)"]
+      "architecture": ["Objektorientierte Programmierung", "SOLID-Prinzipien", "Model-View-ViewModel (MVVM)", "Model-View-Controller (MVC)"]
     },
     "testing": {
       "title": "Testen",

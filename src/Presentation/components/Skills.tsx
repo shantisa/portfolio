@@ -7,6 +7,7 @@ import industryIcon from '../../resources/icons/industryIcon.svg'
 import testIcon from '../../resources/icons/testIcon.svg'
 import verIcon from '../../resources/icons/versionIcon.svg'
 import dbIcon from '../../resources/icons/dbIcon.svg'
+import bkeIcon from '../../resources/icons/bkeIcon.svg'
 
 /**
  * Interface defining the props expected by the Skills component. It
@@ -56,6 +57,21 @@ export default function Skills(props : SkillsProps){
                       {props.data !== null
                       ? props.data.webTechnologies.skills.map((language, index) => {
                           if(index+1 === props.data?.webTechnologies.skills.length){
+                              return <span key={index}>{language}</span>
+                          } else{
+                              return <span key={index}>{language}, </span>
+                          }
+
+                      }) : ""}
+                  </p>
+              </div>
+              <div>
+                  <img src={bkeIcon} alt="Backend Technologies"/>
+                  <h2>{props.data !== null ? props.data.backendTechnologies.title : ""}</h2>
+                  <p>
+                      {props.data !== null
+                      ? props.data.backendTechnologies.skills.map((language, index) => {
+                          if(index+1 === props.data?.backendTechnologies.skills.length){
                               return <span key={index}>{language}</span>
                           } else{
                               return <span key={index}>{language}, </span>
